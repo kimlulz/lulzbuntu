@@ -1,5 +1,5 @@
 # lulzbuntu
-Just script for configure my ubuntu desktop environment.
+Just script for configure my ubuntu desktop environment.  
 sudo ./lulzbuntu.sh
 
 ## Script Include...
