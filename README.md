@@ -1,5 +1,6 @@
 # lulzbuntu
 Just script for configure my ubuntu desktop environment.
+sudo ./lulzbuntu.sh
 
 ## Script Include...
 ### Change APT Server
@@ -16,7 +17,7 @@ Just script for configure my ubuntu desktop environment.
 ### Install Basic Packages
 `sudo apt update`   
 `sudo add-apt-repository ppa:dawidd0811/neofetch`   
-`sudo apt install -y neofetch build-essential curl gdebi gnome-tweaks make`   
+`sudo apt install -y neofetch build-essential curl gdebi gnome-tweaks make git`   
 
 ### install whale_Browser
 `wget https://installer-whale.pstatic.net/downloads/installers/naver-whale-stable_amd64.deb --no-check-certificate`   
