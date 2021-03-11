@@ -1,6 +1,6 @@
 # lulzbuntu
 Just script for configure my ubuntu desktop environment.  
-sudo ./lulzbuntu.sh
+To execute, `sudo ./lulzbuntu.sh`
 
 ## Script Include...
 ### Change APT Server
