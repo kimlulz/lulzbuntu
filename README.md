@@ -34,5 +34,5 @@ Just script for configure my ubuntu desktop environment.
 `sudo apt purge firefox thunderbird`
 
 ## OPTIONAL
-### Add Neofetch to .BashRC
+### Add Neofetch to .bashrc
 `echo "echo 'neofetch' >> /$HOME/.bashrc"`
