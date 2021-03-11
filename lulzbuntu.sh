@@ -32,7 +32,7 @@ echo ""
 echo "***install basic Package"
 sudo apt update
 sudo add-apt-repository ppa:dawidd0811/neofetch
-sudo apt install -y neofetch build-essential curl gdebi gnome-tweaks make
+sudo apt install -y neofetch build-essential curl gdebi gnome-tweaks make git 
 echo "***install whale"
 wget https://installer-whale.pstatic.net/downloads/installers/naver-whale-stable_amd64.deb --no-check-certificate
 sudo dpkg -i naver-whale-stable_amd64.deb
