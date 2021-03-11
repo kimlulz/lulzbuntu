@@ -1,0 +1,2 @@
+# lulzbuntu
+Just configuration script.
