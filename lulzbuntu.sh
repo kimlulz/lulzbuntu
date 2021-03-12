@@ -24,14 +24,11 @@ echo "***upgrade distro"
 sudo apt dist-upgrade
 echo ""
 
-echo "***remove unused apt"
-sudo apt autoremove -y
-echo ""
-
 echo ""
 echo "***install basic Package"
-sudo apt update
 sudo add-apt-repository ppa:dawidd0811/neofetch
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt update
 sudo apt install -y neofetch build-essential curl gdebi gnome-tweaks make git 
 echo "***install whale"
 wget https://installer-whale.pstatic.net/downloads/installers/naver-whale-stable_amd64.deb --no-check-certificate
@@ -50,6 +47,10 @@ echo ""
 
 echo "Remove unused apps"
 sudo apt purge firefox thunderbird
+
+echo "***remove unused apt"
+sudo apt autoremove -y
+echo ""
 
 echo "please copy&paste the command below"
 echo ""
