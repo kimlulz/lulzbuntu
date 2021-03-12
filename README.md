@@ -16,8 +16,8 @@ To execute, `chmod +x lulzbuntu.sh` `sudo ./lulzbuntu.sh`
 
 ### Install Basic Packages
 `sudo apt update`   
-`sudo add-apt-repository ppa:dawidd0811/neofetch` 
-`sudo add-apt-repository ppa:git-core/ppa` 
+`sudo add-apt-repository ppa:dawidd0811/neofetch`   
+`sudo add-apt-repository ppa:git-core/ppa`   
 `sudo apt install -y neofetch build-essential curl gdebi gnome-tweaks make git`   
 
 ### install whale_Browser
