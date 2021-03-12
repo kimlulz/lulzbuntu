@@ -52,8 +52,7 @@ echo "***remove unused apt"
 sudo apt autoremove -y
 echo ""
 
-echo "please copy&paste the command below"
-echo ""
-echo "echo 'neofetch' >> /$HOME/.bashrc"
+echo "***Add neofetch in your shell"
+echo 'neofetch' >> /home/$USERNAME/.bashrc
 echo ""
 echo "${bold}***Finished!!"

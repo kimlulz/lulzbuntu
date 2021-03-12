@@ -33,8 +33,8 @@ To execute, `chmod +x [script].sh` `sudo ./[script].sh`
 `sudo apt purge firefox thunderbird`   
 `sudo apt autoremove -y`
 
-### [OPTIONAL] Add Neofetch to .bashrc
-`echo "echo 'neofetch' >> /$HOME/.bashrc"`
+### Add Neofetch to .bashrc
+`echo 'neofetch' >> /home/$USERNAME/.bashrc`
 
 ## ibus_KRKEY_Fix.sh
 Fix 한영(KR/EN) Key function for iBus
