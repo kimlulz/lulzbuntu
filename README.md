@@ -2,7 +2,7 @@
 Just script for configure my ubuntu desktop environment.  
 To execute, `sudo ./lulzbuntu.sh`
 
-## Script Include...
+## lulzbuntu.sh
 ### Change APT Server
 `sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list`
 
