@@ -1,6 +1,6 @@
 # lulzbuntu
 Just script for configure my ubuntu desktop environment.  
-To execute, `chmod +x lulzbuntu.sh` `sudo ./lulzbuntu.sh`
+To execute, `chmod +x [script].sh` `sudo ./[script].sh`
 
 ## lulzbuntu.sh
 ### Change APT Server
@@ -33,6 +33,17 @@ To execute, `chmod +x lulzbuntu.sh` `sudo ./lulzbuntu.sh`
 `sudo apt purge firefox thunderbird`   
 `sudo apt autoremove -y`
 
-## OPTIONAL
-### Add Neofetch to .bashrc
+### [OPTIONAL] Add Neofetch to .bashrc
 `echo "echo 'neofetch' >> /$HOME/.bashrc"`
+
+## ibus_KRKEY_Fix.sh
+Fix 한영(KR/EN) Key function for iBus
+### Copy and Paste modified file
+`default  alphanumeric_keys
+xkb_symbols "kr104" {
+    include "us"
+    name[Group1]= "Korean (101/104 key compatible)";
+    include "kr(ralt_hangul)"
+    include "kr(rctrl_hanja)"
+};`
+`cp kr /usr/share/X11/xkb/symbols/kr`
