@@ -17,7 +17,7 @@ To execute, `chmod +x [script].sh` `sudo ./[script].sh`
 `sudo apt update`   
 `sudo apt install -y neofetch build-essential curl gdebi gnome-tweaks make git`   
 
-### install whale_Browser
+### install whale_Browser`
 `wget https://installer-whale.pstatic.net/downloads/installers/naver-whale-stable_amd64.deb --no-check-certificate`   
 `sudo dpkg -i naver-whale-stable_amd64.deb` 
 
@@ -45,5 +45,5 @@ xkb_symbols "kr104" {
     name[Group1]= "Korean (101/104 key compatible)";
     include "kr(ralt_hangul)"
     include "kr(rctrl_hanja)"
-};`
+};`     
 `cp kr /usr/share/X11/xkb/symbols/kr`
