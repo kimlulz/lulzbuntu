@@ -30,7 +30,7 @@ To execute, `chmod +x lulzbuntu.sh` `sudo ./lulzbuntu.sh`
 `sudo sh VMware-Player-16.1.0-17198959.x86_64.bundle` 
 
 ### Remove unused Packages
-`sudo apt purge firefox thunderbird`
+`sudo apt purge firefox thunderbird`   
 `sudo apt autoremove -y`
 
 ## OPTIONAL
