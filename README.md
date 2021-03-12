@@ -11,13 +11,10 @@ To execute, `chmod +x lulzbuntu.sh` `sudo ./lulzbuntu.sh`
 `sudo apt upgrade -y`  
 `sudo apt dist-upgrade`
 
-### Remove unused Packages
-`sudo apt autoremove -y`
-
 ### Install Basic Packages
-`sudo apt update`   
 `sudo add-apt-repository ppa:dawidd0811/neofetch`   
 `sudo add-apt-repository ppa:git-core/ppa`   
+`sudo apt update`   
 `sudo apt install -y neofetch build-essential curl gdebi gnome-tweaks make git`   
 
 ### install whale_Browser
@@ -32,8 +29,9 @@ To execute, `chmod +x lulzbuntu.sh` `sudo ./lulzbuntu.sh`
 `wget https://download3.vmware.com/software/player/file/VMware-Player-16.1.0-17198959.x86_64.bundle --no-check-certificate`   
 `sudo sh VMware-Player-16.1.0-17198959.x86_64.bundle` 
 
-### Remove unused apps
+### Remove unused Packages
 `sudo apt purge firefox thunderbird`
+`sudo apt autoremove -y`
 
 ## OPTIONAL
 ### Add Neofetch to .bashrc
