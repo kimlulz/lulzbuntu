@@ -30,6 +30,7 @@ sudo add-apt-repository ppa:dawidd0811/neofetch
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt update
 sudo apt install -y neofetch build-essential curl gdebi gnome-tweaks make git 
+
 echo "***install whale"
 wget https://installer-whale.pstatic.net/downloads/installers/naver-whale-stable_amd64.deb --no-check-certificate
 sudo dpkg -i naver-whale-stable_amd64.deb
@@ -46,7 +47,7 @@ sudo sh VMware-Player-16.1.0-17198959.x86_64.bundle
 echo ""
 
 echo "Remove unused apps"
-sudo apt purge firefox thunderbird
+sudo apt purge firefox thunderbird google-chrome-stable
 
 echo "***remove unused apt"
 sudo apt autoremove -y
