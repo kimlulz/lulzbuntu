@@ -25,7 +25,7 @@ normal boot -> CTRL+ALT+F4 -> login -> `sudo dpkg --configure -a` -> `reboot` ->
 `sudo apt update`   
 `sudo apt install -y neofetch build-essential curl gdebi gnome-tweaks make git`   
 
-### install whale_Browser`
+### install whale_Browser
 `wget https://installer-whale.pstatic.net/downloads/installers/naver-whale-stable_amd64.deb --no-check-certificate`   
 `sudo dpkg -i naver-whale-stable_amd64.deb` 
 
