@@ -2,6 +2,14 @@
 Just script for configure my ubuntu desktop environment.  
 To execute, `chmod +x [script].sh` `sudo ./[script].sh`
 
+In case of error while using script (Ex. `oh no something has gone wrong`), reboot, reboot
+
+recovery mode -> DPKG
+
+or 
+
+normal boot -> CTRL+ALT+F4 -> login -> `sudo dpkg --configure -a` -> `reboot` -> `./lulzbuntu.sh` 
+
 ## lulzbuntu.sh
 ### Change APT Server
 `sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list`
