@@ -38,8 +38,9 @@ normal boot -> CTRL+ALT+F4 -> login -> `sudo dpkg --configure -a` -> `reboot` ->
 `sudo sh VMware-Player-16.1.0-17198959.x86_64.bundle` 
 
 ### install balenaEtcher
-`wget https://github.com/gantonayde/balena-etcher-snap/releases/download/v1.5.89-beta-snap/balena-etcher-electron_1.5.89_amd64.snap --no-check-certificate`   
-`sudo snap install balena-etcher-electron_1.5.89_amd64.snap --dangerous --classic` 
+`echo "deb https://deb.etcher.io stable etcher" | sudo tee /etc/apt/sources.list.d/balena-etcher.list`   
+`sudo apt-key adv --keyserver hkps://keyserver.ubuntu.com:443 --recv-keys 379CE192D401AB61`    
+`sudo apt install balena-etcher-electron` 
 
 ### Remove unused Packages
 `sudo apt purge firefox thunderbird google-chrome-stable`   
