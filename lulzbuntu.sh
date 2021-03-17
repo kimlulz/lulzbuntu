@@ -34,7 +34,7 @@ sudo sh VMware-Player-16.1.0-17198959.x86_64.bundle
 echo "### Install balenaEtcher"
 echo "deb https://deb.etcher.io stable etcher" | sudo tee /etc/apt/sources.list.d/balena-etcher.list
 sudo apt-key adv --keyserver hkps://keyserver.ubuntu.com:443 --recv-keys 379CE192D401AB61
-sudo apt install balena-etcher-electron 
+sudo apt install balena-etcher-electron -y
 
 echo "### Remove unused apps"
 sudo apt purge firefox thunderbird google-chrome-stable -y
