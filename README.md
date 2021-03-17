@@ -2,7 +2,7 @@
 Just script for configure my ubuntu desktop environment.  
 To execute, `source [script].sh`
 
-In case of error while using script (Ex. `oh no something has gone wrong`), reboot, reboot
+In case of error while using script (Ex. `oh no something has gone wrong`), reboot ->
 
 recovery mode -> DPKG
 
