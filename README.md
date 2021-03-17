@@ -52,7 +52,7 @@ normal boot -> CTRL+ALT+F4 -> login -> `sudo dpkg --configure -a` -> `reboot` ->
 `sudo rm naver-whale-stable_amd64.deb`    
 
 ### Add Neofetch to .bashrc
-`echo 'neofetch' >> /home/$USERNAME/.bashrc`
+`echo 'neofetch' >> /home/$USERNAME/.bashrc` 
 
 ## ibus_KRKEY_Fix.sh
 Fix 한영(KR/EN) Key function for iBus
