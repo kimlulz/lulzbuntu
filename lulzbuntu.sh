@@ -31,6 +31,9 @@ sudo dpkg -i code_1.54.1-1614898113_amd64.deb
 echo "### Install VMware Player"
 wget https://download3.vmware.com/software/player/file/VMware-Player-16.1.0-17198959.x86_64.bundle --no-check-certificate
 sudo sh VMware-Player-16.1.0-17198959.x86_64.bundle
+echo "### Install balenaEtcher"
+wget https://github.com/gantonayde/balena-etcher-snap/releases/download/v1.5.89-beta-snap/balena-etcher-electron_1.5.89_amd64.snap --no-check-certificate 
+sudo snap install balena-etcher-electron_1.5.89_amd64.snap --dangerous --classic
 
 echo "### Remove unused apps"
 sudo apt purge firefox thunderbird google-chrome-stable -y

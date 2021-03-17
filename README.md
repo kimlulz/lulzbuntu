@@ -4,7 +4,7 @@ To execute, `source [script].sh`
 
 In case of error while using script (Ex. `oh no something has gone wrong`), reboot ->
 
-recovery mode -> DPKG
+recovery mode -> dpkg
 
 or 
 
@@ -36,6 +36,10 @@ normal boot -> CTRL+ALT+F4 -> login -> `sudo dpkg --configure -a` -> `reboot` ->
 ### install VMware Player
 `wget https://download3.vmware.com/software/player/file/VMware-Player-16.1.0-17198959.x86_64.bundle --no-check-certificate`   
 `sudo sh VMware-Player-16.1.0-17198959.x86_64.bundle` 
+
+### install balenaEtcher
+`wget https://github.com/gantonayde/balena-etcher-snap/releases/download/v1.5.89-beta-snap/balena-etcher-electron_1.5.89_amd64.snap --no-check-certificate`   
+`sudo snap install balena-etcher-electron_1.5.89_amd64.snap --dangerous --classic` 
 
 ### Remove unused Packages
 `sudo apt purge firefox thunderbird google-chrome-stable`   
