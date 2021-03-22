@@ -25,7 +25,7 @@ normal boot -> CTRL+ALT+F4 -> login -> `sudo dpkg --configure -a` -> `reboot` ->
 `sudo apt update`   
 `sudo apt install -y neofetch build-essential curl gdebi gnome-tweaks make git`   
 
-### install whale_Browser
+### Install Whale Browser (Based on Chromium)
 `sudo sh -c 'echo "deb [arch=amd64] http://repo.whale.naver.com/stable/deb stable main" >> /etc/apt/sources.list.d/naver-whale.list'`   
 `wget -q -O - http://repo.whale.naver.com/stable/deb/public.gpg | sudo apt-key add -`   
 `sudo apt-get update`   
@@ -42,9 +42,16 @@ normal boot -> CTRL+ALT+F4 -> login -> `sudo dpkg --configure -a` -> `reboot` ->
 ### install balenaEtcher
 `echo "deb https://deb.etcher.io stable etcher" | sudo tee /etc/apt/sources.list.d/balena-etcher.list`   
 `sudo apt-key adv --keyserver hkps://keyserver.ubuntu.com:443 --recv-keys 379CE192D401AB61`    
+`sudo apt update`  
 `sudo apt install balena-etcher-electron` 
 
-### Remove unused Packages
+### install Spotify
+`curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -`   
+`echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list`   
+`sudo apt update`  
+`sudo apt install spotify-client`   
+
+### Remove unused packages
 `sudo apt purge firefox thunderbird google-chrome-stable`   
 `sudo apt autoremove -y`
 

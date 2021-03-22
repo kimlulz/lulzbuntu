@@ -4,30 +4,32 @@ normal=$(tput sgr0)
 echo "################################################################################"
 echo "################################ Upgrade Script ################################"
 echo "################################################################################"
-echo "${bold}!!! Plz using with SUDO PERMISSION!!!"
-echo "S C R I P T   B Y   K I M L U L Z${normal}"
+echo "${bold}!!! Required sudo permission !!!"
+echo "S C R I P T   B Y   K I M L U L Z"
+echo "github.com/kimlulz/lulzbuntu${normal}"
 
-echo "### Change APT SERVER"
+echo "### Change Mirror Server"
+echo "mirror.kakao.com <--- KR Server"
 sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
-echo "### update apt list"
+echo "### Update apt list"
 sudo apt update
-echo "### upgrade all apt"
+echo "### Upgrade all apt"
 sudo apt upgrade -y
-echo "### upgrade distro"
+echo "### Upgrade distro"
 sudo apt dist-upgrade
 
-echo "### Install basic Package"
+echo "### Install basic package"
 sudo add-apt-repository ppa:dawidd0811/neofetch -y
 sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt update
 sudo apt install -y neofetch build-essential curl gdebi gnome-tweaks make git 
-echo "### Install whale"
+echo "### Install Whale Browser (Based on Chromium)"
 sudo sh -c 'echo "deb [arch=amd64] http://repo.whale.naver.com/stable/deb stable main" >> /etc/apt/sources.list.d/naver-whale.list'
 wget -q -O - http://repo.whale.naver.com/stable/deb/public.gpg | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install naver-whale-stable
-echo "### Install vscode"
+echo "### Install VSCode"
 wget https://az764295.vo.msecnd.net/stable/f30a9b73e8ffc278e71575118b6bf568f04587c8/code_1.54.1-1614898113_amd64.deb --no-check-certificate
 sudo dpkg -i code_1.54.1-1614898113_amd64.deb
 echo "### Install VMware Player"
@@ -36,11 +38,16 @@ sudo sh VMware-Player-16.1.0-17198959.x86_64.bundle
 echo "### Install balenaEtcher"
 echo "deb https://deb.etcher.io stable etcher" | sudo tee /etc/apt/sources.list.d/balena-etcher.list
 sudo apt-key adv --keyserver hkps://keyserver.ubuntu.com:443 --recv-keys 379CE192D401AB61
+sudo apt-get update
 sudo apt install balena-etcher-electron -y
+echo "### Install Spotify"
+curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update
+sudo apt install spotify-client
 
-echo "### Remove unused apps"
+echo "### Remove unused packages"
 sudo apt purge firefox thunderbird google-chrome-stable -y
-echo "### Remove unused apt"
 sudo apt autoremove -y
 echo "### Remove downloaded files"
 sudo rm code_1.54.1-1614898113_amd64.deb
