@@ -45,7 +45,6 @@ sudo apt autoremove -y
 echo "### Remove downloaded files"
 sudo rm code_1.54.1-1614898113_amd64.deb
 sudo rm VMware-Player-16.1.0-17198959.x86_64.bundle
-sudo rm naver-whale-stable_amd64.deb 
 
 echo "### Add neofetch in your shell"
 echo 'neofetch' >> /home/$USERNAME/.bashrc
