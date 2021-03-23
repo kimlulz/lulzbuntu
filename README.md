@@ -26,10 +26,8 @@ normal boot -> CTRL+ALT+F4 -> login -> `sudo dpkg --configure -a` -> `reboot` ->
 `sudo apt install -y neofetch build-essential curl gdebi gnome-tweaks make git`   
 
 ### Install Whale Browser (Based on Chromium)
-`sudo sh -c 'echo "deb [arch=amd64] http://repo.whale.naver.com/stable/deb stable main" >> /etc/apt/sources.list.d/naver-whale.list'`   
-`wget -q -O - http://repo.whale.naver.com/stable/deb/public.gpg | sudo apt-key add -`   
-`sudo apt-get update`   
-`sudo apt-get install naver-whale-stable`   
+`sudo sh -c 'echo "deb [arch=amd64] http://repo.whale.naver.com/stab`sudo mv wine-gecko-2.47.2-x86_64  /usr/share/wine/gecko`   
+
 
 ### install vscode
 `wget https://az764295.vo.msecnd.net/stable/f30a9b73e8ffc278e71575118b6bf568f04587c8/code_1.54.1-1614898113_amd64.deb --no-check-certificate`   
@@ -61,6 +59,18 @@ normal boot -> CTRL+ALT+F4 -> login -> `sudo dpkg --configure -a` -> `reboot` ->
 
 ### Add Neofetch to .bashrc
 `echo 'neofetch' >> /home/$USERNAME/.bashrc` 
+
+## install PsCC-Linux.sh
+Install Photoshop CC for Linux
+Photoshop CC v19 installer for Linux  By  Gictorbit
+https://github.com/Gictorbit/photoshopCClinux
+### Install Wine
+`sudo apt update`   
+`sudo apt install -y wine64`   
+`sudo apt install -y winetricks mono-complete`   
+`wget http://dl.winehq.org/wine/wine-gecko/2.47.2/wine-gecko-2.47.2-x86_64.tar.xz`   
+`tar -xvf wine-gecko-2.47.2-x86_64.tar.xz `   
+`sudo mv wine-gecko-2.47.2-x86_64  /usr/share/wine/gecko`   
 
 ## ibus_KRKEY_Fix.sh
 Fix 한영(KR/EN) Key function for iBus
