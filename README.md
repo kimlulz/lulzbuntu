@@ -50,7 +50,7 @@ normal boot -> CTRL+ALT+F4 -> login -> `sudo dpkg --configure -a` -> `reboot` ->
 `sudo apt install spotify-client`   
 
 ### Remove unused packages
-`sudo apt purge firefox thunderbird google-chrome-stable`   
+`sudo apt purge firefox* thunderbird* google-chrome-stable`   
 `sudo apt autoremove -y`
 
 ### Remove downloaded files
