@@ -64,7 +64,8 @@ normal boot -> CTRL+ALT+F4 -> login -> `sudo dpkg --configure -a` -> `reboot` ->
 Install Photoshop CC for Linux
 Photoshop CC v19 installer for Linux  By  Gictorbit
 https://github.com/Gictorbit/photoshopCClinux
-### Install Wine
+
+script include install wine, winetrick
 
 ## ibus_KRKEY_Fix.sh
 Fix 한영(KR/EN) Key function for iBus
