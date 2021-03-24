@@ -65,12 +65,6 @@ Install Photoshop CC for Linux
 Photoshop CC v19 installer for Linux  By  Gictorbit
 https://github.com/Gictorbit/photoshopCClinux
 ### Install Wine
-`sudo apt update`   
-`sudo apt install -y wine64`   
-`sudo apt install -y winetricks mono-complete`   
-`wget http://dl.winehq.org/wine/wine-gecko/2.47.2/wine-gecko-2.47.2-x86_64.tar.xz`   
-`tar -xvf wine-gecko-2.47.2-x86_64.tar.xz `   
-`sudo mv wine-gecko-2.47.2-x86_64  /usr/share/wine/gecko`   
 
 ## ibus_KRKEY_Fix.sh
 Fix 한영(KR/EN) Key function for iBus
