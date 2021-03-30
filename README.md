@@ -21,9 +21,10 @@ normal boot -> CTRL+ALT+F4 -> login -> `sudo dpkg --configure -a` -> `reboot` ->
 
 ### Install Basic Packages
 `sudo add-apt-repository ppa:dawidd0811/neofetch`   
-`sudo add-apt-repository ppa:git-core/ppa`   
+`sudo add-apt-repository ppa:git-core/ppa` 
+`curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -` node.js 14.x    
 `sudo apt update`   
-`sudo apt install -y neofetch build-essential curl gdebi gnome-tweaks make git`   
+`sudo apt install -y neofetch nodejs build-essential curl gdebi gnome-tweaks make git`   
 
 ### Install Whale Browser (Based on Chromium)
 `sudo sh -c 'echo "deb [arch=amd64] http://repo.whale.naver.com/stable/deb stable main" >> /etc/apt/sources.list.d/naver-whale.list'`   
