@@ -9,7 +9,7 @@ echo "S C R I P T   B Y   K I M L U L Z"
 echo "github.com/kimlulz/lulzbuntu${normal}"
 
 echo "### Change Mirror Server"
-echo "mirror.kakao.com <--- KR Server"
+echo "mirror.kakao.com"
 sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 echo "### Update apt list"
