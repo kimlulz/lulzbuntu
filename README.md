@@ -10,7 +10,7 @@ or
 
 normal boot -> CTRL+ALT+F4 -> login -> `sudo dpkg --configure -a` -> `reboot` -> `./lulzbuntu.sh` 
 
-## lulzbuntu.sh include
+## lulzbuntu.sh
 ### Change APT Server
 `sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list`
 ### Update distro and APTs
@@ -30,11 +30,11 @@ Remove downloaded files (VSCode, VMware Player)
 ### Add Neofetch to .bashrc
 `echo 'neofetch' >> /home/$USERNAME/.bashrc` 
 
-## gnome_appearance.sh include
+## gnome_appearance.sh
 Install Mkos-Big-Sur icons and WhiteSur themes    
 Need install dash to dock
 
-## PsCC-Linux.sh include
+## PsCC-Linux.sh
 Install Photoshop CC for Linux
 Photoshop CC v19 installer for Linux  By  Gictorbit
 https://github.com/Gictorbit/photoshopCClinux
