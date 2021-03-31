@@ -43,12 +43,4 @@ script include install wine, winetrick
 
 ## ibus_KRKEY_Fix.sh
 Fix 한영(KR/EN) Key function for iBus
-### Copy and Paste modified file
-`default  alphanumeric_keys
-xkb_symbols "kr104" {
-    include "us"
-    name[Group1]= "Korean (101/104 key compatible)";
-    include "kr(ralt_hangul)"
-    include "kr(rctrl_hanja)"
-};`     
-`cp kr /usr/share/X11/xkb/symbols/kr`
+set default kr106 to kr104
