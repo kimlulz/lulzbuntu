@@ -16,16 +16,22 @@ normal boot -> CTRL+ALT+F4 -> login -> `sudo dpkg --configure -a` -> `reboot` ->
 ### Update distro and APTs
 ### Install Packages
 Add APT Repository ppa:dawidd0811/neofetch, ppa:git-core/ppa    
+
 Use Curl https://deb.nodesource.com/setup_14.x to get node.js v.14 (Official repo has an old version of nodejs..)    
+
 Install neofetch, nodejs, build-essential, curl, gdebi, gnome-tweaks, make, git    
+
 Install Whale Browser (Based on Chromium), VSCode, VMware Player, balenaEtcher, Spotify    
+
 Remove firefox, thunderbird, google-chrome-stable and unused packages(apt autoremove)    
+
 Remove downloaded files (VSCode, VMware Player)    
+  
 ### Add Neofetch to .bashrc
 `echo 'neofetch' >> /home/$USERNAME/.bashrc` 
 
 ## gnome_appearance.sh include
-Install Mkos-Big-Sur icons and WhiteSur themes
+Install Mkos-Big-Sur icons and WhiteSur themes    
 Need install dash to dock
 
 ## PsCC-Linux.sh include
