@@ -53,7 +53,7 @@ echo "### Remove unused packages"
 sudo apt purge firefox* thunderbird* google-chrome-stable -y
 sudo apt autoremove -y
 echo "### Remove downloaded files"
-sudo rm code_1.54.1-1614898113_amd64.deb
+sudo rm VMware-Player-16.1.0-17198959.x86_64.bundle
 
 echo "### Add neofetch in your shell"
 echo 'neofetch' >> /home/$USERNAME/.bashrc
