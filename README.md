@@ -31,8 +31,8 @@ Remove downloaded files (VSCode, VMware Player)
 `echo 'neofetch' >> /home/$USERNAME/.bashrc` 
 
 ## gnome_appearance.sh
-Install Mkos-Big-Sur icons and WhiteSur themes    
-Need install dash to dock
+Install gnome-tweaks, Mkos-Big-Sur icons and WhiteSur themes    
+Should install dash to dock manually
 
 ## PsCC-Linux.sh
 Install Photoshop CC for Linux
