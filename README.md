@@ -25,7 +25,7 @@ Install Whale Browser (Based on Chromium), VSCode, VMware Player, balenaEtcher, 
 
 Remove firefox, thunderbird, google-chrome-stable and unused packages(apt autoremove)    
 
-Remove downloaded files (VSCode, VMware Player)    
+Remove downloaded files (VMware Player)    
   
 ### Add Neofetch to .bashrc
 `echo 'neofetch' >> /home/$USERNAME/.bashrc` 
