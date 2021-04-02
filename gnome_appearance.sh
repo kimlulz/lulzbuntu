@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo apt install -y gnome-tweaks
 git clone https://github.com/kimlulz/Mkos-Big-Sur.git
 cd Mkos-Big-Sur
 mv Mkos-Big-Sur /home/$USER/.local/share/icons
