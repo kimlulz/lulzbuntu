@@ -22,7 +22,7 @@ sudo apt dist-upgrade
 echo "### Install basic package"
 sudo add-apt-repository ppa:dawidd0811/neofetch -y
 sudo add-apt-repository ppa:git-core/ppa -y
-curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_15.x | sudo -E bash -
 sudo apt update
 sudo apt install -y neofetch nodejs build-essential curl gdebi gnome-tweaks make git apt-transport-https
 echo "### Install Whale Browser (Based on Chromium)"

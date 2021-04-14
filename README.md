@@ -17,7 +17,7 @@ normal boot -> CTRL+ALT+F4 -> login -> `sudo dpkg --configure -a` -> `reboot` ->
 ### Install Packages
 Add APT Repository ppa:dawidd0811/neofetch, ppa:git-core/ppa    
 
-Use Curl https://deb.nodesource.com/setup_14.x to get node.js v.14 (Official repo has an old version of nodejs..)    
+Use Curl https://deb.nodesource.com/setup_15.x to get node.js v.15 (Official repo has an old version of nodejs..)    
 
 Install neofetch, nodejs, build-essential, curl, gdebi, gnome-tweaks, make, git    
 
