@@ -27,8 +27,42 @@ Remove firefox, thunderbird, google-chrome-stable and unused packages(apt autore
 
 Remove downloaded files (VMware Player)    
   
-### Add Neofetch to .bashrc
-`echo 'neofetch' >> /home/$USERNAME/.bashrc` 
+### Customize .bashrc
+```
+PS1='\[\e[0m\][\[\e[0;1;91m\]\u\[\e[0m\]|\[\e[0;1m\]$?\[\e[0m\]] \[\e[0;1;3m\]\w \[\e[0;92m\]\$ \[\e[0m\]'
+neofetch
+IFS=';' read updates security_updates < <(/usr/lib/update-notifier/apt-check 2>&1)
+echo "[APT]" $updates "updates available"
+echo "[APT]" $security_updates "security updates available"
+if [ -f /var/run/reboot-required ]; then
+  echo '[APT] Reboot Required'
+fi
+```
+```
+
+            .-/+oossssoo+/-.               kimlulz@lulzbot 
+        `:+ssssssssssssssssss+:`           --------------- 
+      -+ssssssssssssssssssyyssss+-         OS: Ubuntu 20.04.2 LTS x86_64 
+    .ossssssssssssssssssdMMMNysssso.       Host: 900X3K P12AEN 
+   /ssssssssssshdmmNNmmyNMMMMhssssss/      Kernel: 5.8.0-49-generic 
+  +ssssssssshmydMMMMMMMNddddyssssssss+     Uptime: 8 hours, 56 mins 
+ /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/    Packages: 2070 (dpkg), 10 (snap) 
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Shell: bash 5.0.17 
++sssshhhyNMMNyssssssssssssyNMMMysssssss+   Resolution: 1920x1080 
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso   DE: GNOME 
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso   WM: Mutter 
++sssshhhyNMMNyssssssssssssyNMMMysssssss+   WM Theme: Adwaita 
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Theme: WhiteSur-dark [GTK2/3] 
+ /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/    Icons: WhiteSur-dark [GTK2/3] 
+  +sssssssssdmydMMMMMMMMddddyssssssss+     Terminal: gnome-terminal 
+   /ssssssssssshdmNNNNmyNMMMMhssssss/      CPU: Intel i7-5500U (4) @ 3.000GHz 
+    .ossssssssssssssssssdMMMNysssso.       GPU: Intel HD Graphics 5500 
+      -+sssssssssssssssssyyyssss+-         Memory: 4803MiB / 7856MiB 
+        `:+ssssssssssssssssss+:`
+            .-/+oossssoo+/-.                                       
+```
+
+[**username**|0] *~/bin* $ 
 
 ## gnome_appearance.sh
 Install gnome-tweaks, Mkos-Big-Sur icons and WhiteSur themes    
