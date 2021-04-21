@@ -39,14 +39,13 @@ if [ -f /var/run/reboot-required ]; then
 fi
 ```
 ```
-
             .-/+oossssoo+/-.               kimlulz@lulzbot 
         `:+ssssssssssssssssss+:`           --------------- 
       -+ssssssssssssssssssyyssss+-         OS: Ubuntu 20.04.2 LTS x86_64 
     .ossssssssssssssssssdMMMNysssso.       Host: 900X3K P12AEN 
-   /ssssssssssshdmmNNmmyNMMMMhssssss/      Kernel: 5.8.0-49-generic 
-  +ssssssssshmydMMMMMMMNddddyssssssss+     Uptime: 8 hours, 56 mins 
- /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/    Packages: 2070 (dpkg), 10 (snap) 
+   /ssssssssssshdmmNNmmyNMMMMhssssss/      Kernel: 5.8.0-50-generic 
+  +ssssssssshmydMMMMMMMNddddyssssssss+     Uptime: 6 hours, 49 mins 
+ /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/    Packages: 2075 (dpkg), 11 (snap) 
 .ssssssssdMMMNhsssssssssshNMMMdssssssss.   Shell: bash 5.0.17 
 +sssshhhyNMMNyssssssssssssyNMMMysssssss+   Resolution: 1920x1080 
 ossyNMMMNyMMhsssssssssssssshmmmhssssssso   DE: GNOME 
@@ -57,9 +56,14 @@ ossyNMMMNyMMhsssssssssssssshmmmhssssssso   WM: Mutter
   +sssssssssdmydMMMMMMMMddddyssssssss+     Terminal: gnome-terminal 
    /ssssssssssshdmNNNNmyNMMMMhssssss/      CPU: Intel i7-5500U (4) @ 3.000GHz 
     .ossssssssssssssssssdMMMNysssso.       GPU: Intel HD Graphics 5500 
-      -+sssssssssssssssssyyyssss+-         Memory: 4803MiB / 7856MiB 
+      -+sssssssssssssssssyyyssss+-         Memory: 3367MiB / 7856MiB 
         `:+ssssssssssssssssss+:`
             .-/+oossssoo+/-.                                       
+                                                                   
+
+
+[APT] 0 updates available
+[APT] 0 security updates available
 ```
 
 [**username**|0] *~/bin* $ 
