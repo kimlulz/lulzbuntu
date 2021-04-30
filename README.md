@@ -66,7 +66,7 @@ ossyNMMMNyMMhsssssssssssssshmmmhssssssso   WM: Mutter
 [APT] 0 security updates available
 ```
 
-[**username**|0] *~/bin* $ 
+[**username**|0] <U>*~/bin*</U> $ 
 
 ## lts_to_major.sh
 Change LTS to Non-LTS.
