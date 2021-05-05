@@ -72,8 +72,8 @@ ossyNMMMNyMMhsssssssssssssshmmmhssssssso   WM: Mutter
 Change LTS to Non-LTS.
 
 ## gnome_appearance.sh
-Install gnome-tweaks, Mkos-Big-Sur icons and WhiteSur themes    
-Should install dash to dock manually
+Install gnome-tweaks, Dash to dock, whitesur
+Should install some extentions manually
 
 ## PsCC-Linux.sh
 Install Photoshop CC for Linux
