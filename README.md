@@ -1,6 +1,6 @@
 # lulzbuntu
 Just script for configure my ubuntu desktop environment.  
-To execute, `source [script].sh`
+To execute, `sudo sh [script].sh`
 
 In case of error while using script (Ex. `oh no something has gone wrong`), reboot ->
 
@@ -73,7 +73,7 @@ Change LTS to Non-LTS.
 
 ## gnome_appearance.sh
 Install gnome-tweaks, Dash to dock, whitesur
-Should install some extentions manually
+Should install some extentions manually..
 
 ## PsCC-Linux.sh
 Install Photoshop CC for Linux
