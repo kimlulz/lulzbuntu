@@ -1,19 +1,16 @@
 #!/bin/bash
 sudo apt install -y gnome-tweaks
-git clone https://github.com/kimlulz/Mkos-Big-Sur.git
-cd Mkos-Big-Sur
-mv Mkos-Big-Sur /home/$USER/.local/share/icons
-cd /home/$USER
+git clone https://github.com/micheleg/dash-to-dock.git
+make
+make install
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
 cd WhiteSur-gtk-theme
 ./install.sh
-echo "### GDM"
-./install.sh -g -c light
-echo "### nautilus sidebar size"
-./install.sh -s 280
-echo "### dock"
-cd src/other/dash-to-dock
-./install.sh -d
-echo "### Change Setting - Appearance and Extention(dash-to-dock -> Appearance -> Turn on Use built-in theme)"
-gnome-tweaks
-echo "Finished.."
+./install.sh -c dark -c light -s 280
+./tweaks.sh -d -c dark
+./tweaks.sh -g
+git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git
+cd WhiteSur-icon-theme
+./install.sh
+echo "https://extensions.gnome.org/extension/2/move-clock/"
+echo "https://extensions.gnome.org/extension/19/user-themes/"
