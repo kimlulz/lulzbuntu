@@ -19,7 +19,7 @@ Add APT Repository ppa:dawidd0811/neofetch, ppa:git-core/ppa
 
 Use Curl https://deb.nodesource.com/setup_15.x to get node.js v.15 (Official repo has an old version of nodejs..)    
 
-Install neofetch, nodejs, build-essential, curl, gdebi, gnome-tweaks, make, git    
+Install neofetch, nodejs, build-essential, libva-dev, curl, gdebi, gnome-tweaks, make, git    
 
 Install Whale Browser (Based on Chromium), VSCode, VMware Player, balenaEtcher, Spotify    
 
