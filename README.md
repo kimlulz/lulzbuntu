@@ -38,35 +38,8 @@ if [ -f /var/run/reboot-required ]; then
   echo '[APT] Reboot Required'
 fi
 ```
-```
-            .-/+oossssoo+/-.               kimlulz@lulzbot 
-        `:+ssssssssssssssssss+:`           --------------- 
-      -+ssssssssssssssssssyyssss+-         OS: Ubuntu 20.04.2 LTS x86_64 
-    .ossssssssssssssssssdMMMNysssso.       Host: 900X3K P12AEN 
-   /ssssssssssshdmmNNmmyNMMMMhssssss/      Kernel: 5.8.0-50-generic 
-  +ssssssssshmydMMMMMMMNddddyssssssss+     Uptime: 6 hours, 49 mins 
- /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/    Packages: 2075 (dpkg), 11 (snap) 
-.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Shell: bash 5.0.17 
-+sssshhhyNMMNyssssssssssssyNMMMysssssss+   Resolution: 1920x1080 
-ossyNMMMNyMMhsssssssssssssshmmmhssssssso   DE: GNOME 
-ossyNMMMNyMMhsssssssssssssshmmmhssssssso   WM: Mutter 
-+sssshhhyNMMNyssssssssssssyNMMMysssssss+   WM Theme: Adwaita 
-.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Theme: WhiteSur-dark [GTK2/3] 
- /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/    Icons: WhiteSur-dark [GTK2/3] 
-  +sssssssssdmydMMMMMMMMddddyssssssss+     Terminal: gnome-terminal 
-   /ssssssssssshdmNNNNmyNMMMMhssssss/      CPU: Intel i7-5500U (4) @ 3.000GHz 
-    .ossssssssssssssssssdMMMNysssso.       GPU: Intel HD Graphics 5500 
-      -+sssssssssssssssssyyyssss+-         Memory: 3367MiB / 7856MiB 
-        `:+ssssssssssssssssss+:`
-            .-/+oossssoo+/-.                                       
-                                                                   
+![스크린샷, 2021-05-09 18-38-30](https://user-images.githubusercontent.com/42508318/117567176-dc093880-b0f5-11eb-9ae0-03b78629f7ad.png)
 
-
-[APT] 0 updates available
-[APT] 0 security updates available
-```
-
-[**username**|0] <U>*~/bin*</U> $ 
 
 ## lts_to_major.sh
 Change LTS to Non-LTS.
