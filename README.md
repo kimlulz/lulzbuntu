@@ -1,5 +1,5 @@
 # lulzbuntu
-Just script for configure my ubuntu desktop environment.  
+Shell script for configure my ubuntu desktop environment.  
 To execute, `sudo sh [script].sh`
 
 In case of error while using script (Ex. `oh no something has gone wrong`), reboot ->
