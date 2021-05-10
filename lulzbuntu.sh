@@ -16,7 +16,6 @@ echo "### Update apt list"
 sudo apt update
 echo "### Upgrade all apt"
 sudo apt upgrade -y
-echo "### Upgrade distro"
 sudo apt dist-upgrade
 
 echo "### Install basic package"
@@ -39,8 +38,9 @@ echo "### Install VMware Player"
 wget https://download3.vmware.com/software/player/file/VMware-Player-16.1.0-17198959.x86_64.bundle --no-check-certificate
 sudo sh VMware-Player-16.1.0-17198959.x86_64.bundle
 echo "### Install balenaEtcher"
-echo "deb https://deb.etcher.io stable etcher" | sudo tee /etc/apt/sources.list.d/balena-etcher.list
-sudo apt-key adv --keyserver hkps://keyserver.ubuntu.com:443 --recv-keys 379CE192D401AB61
+curl -1sLf \
+   'https://dl.cloudsmith.io/public/balena/etcher/setup.deb.sh' \
+   | sudo -E bash
 sudo apt update
 sudo apt install -y balena-etcher-electron
 echo "### Install Spotify"
