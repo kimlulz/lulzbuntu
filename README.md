@@ -23,7 +23,7 @@ Install neofetch, nodejs, build-essential, libva-dev, vainfo, curl, gdebi, gnome
 
 Install Whale Browser (Based on Chromium), VSCode, VMware Player, balenaEtcher, Spotify    
 
-Remove firefox, thunderbird, google-chrome-stable and unused packages(apt autoremove)    
+Remove firefox, thunderbird and unused packages(apt autoremove)    
 
 Remove downloaded files (VMware Player)    
   
