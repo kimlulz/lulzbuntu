@@ -24,7 +24,7 @@ Remove downloaded files (VMware Player)
 PS1='\[\e[0m\][\[\e[0;1;91m\]\u\[\e[0m\]|\[\e[0;1m\]$?\[\e[0m\]] \[\e[0;1;3;4m\]\w\[\e[0m\] \[\e[0;92m\]\$ \[\e[0m\]'
 neofetch
 ```
-
+![스크린샷, 2021-05-17 18-48-11](https://user-images.githubusercontent.com/42508318/118469207-75f96280-b740-11eb-84fa-936fe663bd49.png)
 ## lts_to_major.sh
 Change LTS to Non-LTS.
 
