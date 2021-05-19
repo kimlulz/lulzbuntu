@@ -23,7 +23,7 @@ sudo add-apt-repository ppa:dawidd0811/neofetch -y
 sudo add-apt-repository ppa:git-core/ppa -y
 curl -fsSL https://deb.nodesource.com/setup_15.x | sudo -E bash -
 sudo apt update
-sudo apt install -y neofetch nodejs build-essential libva-dev curl gdebi gnome-tweaks make git apt-transport-https
+sudo apt install -y neofetch nodejs build-essential libva-dev curl gdebi gnome-tweaks make git apt-transport-https htop
 echo $USERNAME"|lulzbuntu.sh # [Process 3/6] END of process"
 
 echo $USERNAME"|lulzbuntu.sh # [Process 4/6] Install apps from external method"

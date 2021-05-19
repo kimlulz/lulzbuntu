@@ -14,7 +14,7 @@ or just reboot to recovery mode via grub menu -> select dpkg -> reboot
 ### Install Packages
 Add APT Repository ppa:dawidd0811/neofetch, ppa:git-core/ppa   
 Use Curl https://deb.nodesource.com/setup_15.x to get node.js v.15 (Official repo has an old version of nodejs..)   
-Install neofetch, nodejs, build-essential, libva-dev, vainfo, curl, gdebi, gnome-tweaks, make, git    
+Install neofetch, nodejs, build-essential, libva-dev, vainfo, curl, gdebi, gnome-tweaks, make, git, htop  
 Install Whale Browser (Based on Chromium), VSCode, VMware Player, balenaEtcher, Spotify    
 Remove firefox, thunderbird and unused packages(apt autoremove)    
 Remove downloaded files (VMware Player)    
@@ -27,6 +27,10 @@ neofetch
 ![스크린샷, 2021-05-17 18-48-11](https://user-images.githubusercontent.com/42508318/118469207-75f96280-b740-11eb-84fa-936fe663bd49.png)
 ## lts_to_major.sh
 Change LTS to Non-LTS.
+
+## zsh_install.sh
+WIP
+DO NOT USE
 
 ## gnome_appearance.sh
 Install gnome-tweaks, Dash to dock, whitesur
