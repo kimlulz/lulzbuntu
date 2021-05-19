@@ -29,6 +29,7 @@ neofetch
 Change LTS to Non-LTS.
 
 ## zsh_install.sh
+![스크린샷, 2021-05-20 02-38-11](https://user-images.githubusercontent.com/42508318/118858803-7fd3bf00-b914-11eb-8471-d3ad4a712f81.png)    
 WIP
 DO NOT USE
 
