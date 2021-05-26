@@ -1,6 +1,6 @@
 # lulzbuntu
 Shell script for configure my ubuntu desktop environment.  
-To execute, `sudo sh [script].sh`
+To execute, `sh [script].sh`
 
 In case of error while using script (Ex. `oh no something has gone wrong`),   
 CTRL+ALT+F4 to open tty virtual console -> login -> `sudo dpkg --configure -a` -> `reboot` -> `sudo sh lulzbuntu.sh`   
@@ -47,6 +47,7 @@ script include install wine, winetrick
 ## hoffice_install.sh
 Script for install HANCOM Office(한컴오피스)
 https://github.com/DisLogicator/hoffice
+!DO NOT USE WITH SUDO!
 
 ## ibus_KRKEY_Fix.sh
 Fix 한영(KR/EN) Key function for iBus
