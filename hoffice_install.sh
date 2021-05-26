@@ -12,7 +12,6 @@ unzip hoffice11.zip
 echo "$ mv"
 sudo mkdir /opt/hnc
 sudo mkdir /opt/hnc/icons
-sudo mkdir /
 sudo mv hoffice11/ /opt/hnc/hoffice11
 sudo mv *.desktop /usr/share/applications
 sudo mv *.png /opt/hnc/icons
