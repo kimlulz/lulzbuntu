@@ -44,6 +44,10 @@ https://github.com/Gictorbit/photoshopCClinux
 
 script include install wine, winetrick
 
+## hoffice_install.sh
+Script for install HANCOM Office(한컴오피스)
+https://github.com/DisLogicator/hoffice
+
 ## ibus_KRKEY_Fix.sh
 Fix 한영(KR/EN) Key function for iBus
 set default kr106 to kr104
