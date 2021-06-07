@@ -44,8 +44,8 @@ https://github.com/Gictorbit/photoshopCClinux
 
 script include install wine, winetrick
 
--- ## hoffice_install.sh --
-이거 만들어서 깃허브에 올렸던 놈이 빤쓰런함
+## ~~hoffice_install.sh~~
+~~이거 만들어서 깃허브에 올렸던 놈이 빤쓰런함~~
 
 
 ## ibus_KRKEY_Fix.sh
