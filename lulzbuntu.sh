@@ -23,7 +23,7 @@ sudo add-apt-repository ppa:dawidd0811/neofetch -y
 sudo add-apt-repository ppa:git-core/ppa -y
 curl -fsSL https://deb.nodesource.com/setup_15.x | sudo -E bash -
 sudo apt update
-sudo apt install -y neofetch nodejs build-essential libva-dev curl gdebi gnome-tweaks make git apt-transport-https htop
+sudo apt install -y neofetch nodejs build-essential libva-dev curl gdebi gnome-tweaks make git apt-transport-https htop wget
 echo $USERNAME"|lulzbuntu.sh # [Process 3/6] END of process"
 
 echo $USERNAME"|lulzbuntu.sh # [Process 4/6] Install apps from external method"
@@ -40,12 +40,6 @@ sudo apt install -y code
 echo "$ Install VMWare Player..."
 wget https://download3.vmware.com/software/player/file/VMware-Player-16.1.0-17198959.x86_64.bundle --no-check-certificate
 sudo sh VMware-Player-16.1.0-17198959.x86_64.bundle
-echo "$ Install BalenaEtcher..."
-curl -1sLf \
-   'https://dl.cloudsmith.io/public/balena/etcher/setup.deb.sh' \
-   | sudo -E bash
-sudo apt update
-sudo apt install -y balena-etcher-electron
 echo "$ Install Spotify..."
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
@@ -61,5 +55,6 @@ echo $USERNAME"|lulzbuntu.sh # [Process 5/6] END of process"
 
 echo $USERNAME"|lulzbuntu.sh # [Process 6/6] Customize bash shell"
 cp .bashrc /home/$USERNAME/.bashrc
+cat 
 echo $USERNAME"|lulzbuntu.sh # [Process 6/6] END of process"
 echo $USERNAME"|lulzbuntu.sh # ${bold}Finished."
