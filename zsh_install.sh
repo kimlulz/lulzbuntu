@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt install -y zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 sudo apt install -y fonts-powerline
 chsh -s /usr/bin/zsh
 #!/bin/zsh
