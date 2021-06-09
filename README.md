@@ -36,7 +36,7 @@ Install gnome-tweaks, Dash to dock, whitesur
 Should install some extentions manually.. (will show urls of extentions)
 
 ## PsCC-Linux.sh
-Install Photoshop CC for Linux
+Install Photoshop CC for Linux   
 Photoshop CC v19 installer for Linux  By  Gictorbit
 https://github.com/Gictorbit/photoshopCClinux
 
