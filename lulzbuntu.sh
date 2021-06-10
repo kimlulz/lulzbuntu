@@ -38,7 +38,7 @@ sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt install -y code 
 echo "$ Install VMWare Player..."
-wget https://download3.vmware.com/software/player/file/VMware-Player-16.1.0-17198959.x86_64.bundle --no-check-certificate
+wget https://download3.vmware.com/software/player/file/VMware-Player-16.1.2-17966106.x86_64.bundle --no-check-certificate
 sudo sh VMware-Player-16.1.0-17198959.x86_64.bundle
 echo "$ Install Spotify..."
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
