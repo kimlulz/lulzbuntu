@@ -21,7 +21,7 @@ echo $USERNAME"|lulzbuntu.sh # [Process 2/6] END of process"
 echo $USERNAME"|lulzbuntu.sh # [Process 3/6] Install Basic Packages"
 sudo add-apt-repository ppa:dawidd0811/neofetch -y
 sudo add-apt-repository ppa:git-core/ppa -y
-curl -fsSL https://deb.nodesource.com/setup_15.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt update
 sudo apt install -y neofetch nodejs build-essential libva-dev curl gdebi gnome-tweaks make git apt-transport-https htop wget
 echo $USERNAME"|lulzbuntu.sh # [Process 3/6] END of process"
