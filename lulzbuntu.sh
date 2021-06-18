@@ -39,7 +39,7 @@ sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/p
 sudo apt install -y code 
 echo "$ Install VMWare Player..."
 wget https://download3.vmware.com/software/player/file/VMware-Player-16.1.2-17966106.x86_64.bundle --no-check-certificate
-sudo sh VMware-Player-16.1.0-17198959.x86_64.bundle
+sudo sh VMware-Player-16.1.2-17966106.x86_64.bundle
 echo "$ Install Spotify..."
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
@@ -50,7 +50,7 @@ echo $USERNAME"|lulzbuntu.sh # [Process 4/6] END of process"
 echo $USERNAME"|lulzbuntu.sh # [Process 5/6] Clean"
 sudo apt purge firefox* thunderbird* -y
 sudo apt autoremove -y
-sudo rm VMware-Player-16.1.0-17198959.x86_64.bundle
+sudo rm VMware-Player-16.1.2-17966106.x86_64.bundle
 echo $USERNAME"|lulzbuntu.sh # [Process 5/6] END of process"
 
 echo $USERNAME"|lulzbuntu.sh # [Process 6/6] Customize bash shell"
