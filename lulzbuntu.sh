@@ -52,7 +52,8 @@ sudo rm VMware-Player-16.1.2-17966106.x86_64.bundle
 echo $USERNAME"|lulzbuntu.sh # [Process 5/6] END of process"
 
 echo $USERNAME"|lulzbuntu.sh # [Process 6/6] Customize bash shell"
-cp .bashrc /home/$USERNAME/.bashrc
-cat 
+echo "PS1='\[\e[0m\][\[\e[0;1;91m\]\u\[\e[0m\]|\[\e[0;1ms\]$?\[\e[0m\]] \[\e[0;1;3;4m\]\w\[\e[0m\] \[\e[0;92m\]\$ \[\e[0m\]'
+neofetch" > ~/.bashrc 
+cat ~/.bashrc
 echo $USERNAME"|lulzbuntu.sh # [Process 6/6] END of process"
 echo $USERNAME"|lulzbuntu.sh # ${bold}Finished."
