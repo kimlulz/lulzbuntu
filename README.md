@@ -13,7 +13,7 @@ or just reboot to recovery mode via grub menu -> select dpkg -> reboot
 `sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list`
 ### Update distro and APTs
 ### Install Packages
-`Add APT Repository` dawidd0811/neofetch, git-core/ppa   
+`Add APT Repository` git-core/ppa   
 `Install` node.js via https://deb.nodesource.com/setup_16.x
 `Install` neofetch, nodejs, build-essential, libva-dev, vainfo, curl, gdebi, gnome-tweaks, make, git, htop, wget   
 `Install` Whale Browser (Based on Chromium), VSCode, VMware Player, Spotify    

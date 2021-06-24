@@ -19,7 +19,6 @@ sudo apt dist-upgrade
 echo $USERNAME"|lulzbuntu.sh # [Process 2/6] END of process"
 
 echo $USERNAME"|lulzbuntu.sh # [Process 3/6] Install Basic Packages"
-sudo add-apt-repository ppa:dawidd0811/neofetch -y
 sudo add-apt-repository ppa:git-core/ppa -y
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - 
 sudo apt update
