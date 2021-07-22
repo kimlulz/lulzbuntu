@@ -21,7 +21,7 @@ echo $USERNAME"|lulzbuntu.sh # [Process 2/6] END of process"
 echo $USERNAME"|lulzbuntu.sh # [Process 3/6] Install Basic Packages"
 sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt update
-sudo apt install -y neofetch build-essential gnome-tweaks make git apt-transport-https htop wget
+sudo apt install -y neofetch build-essential gnome-tweaks make git apt-transport-https htop wget curl
 echo $USERNAME"|lulzbuntu.sh # [Process 3/6] END of process"
 
 echo $USERNAME"|lulzbuntu.sh # [Process 4/6] Install apps from external method"
@@ -41,6 +41,7 @@ sudo sh VMware-Player-16.1.2-17966106.x86_64.bundle
 echo "$ Install Spotify..."
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt update && sudo apt install spotify-client
 sudo apt update
 sudo apt install -y spotify-client 
 echo $USERNAME"|lulzbuntu.sh # [Process 4/6] END of process"

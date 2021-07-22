@@ -14,7 +14,7 @@ or just reboot to recovery mode via grub menu -> select dpkg -> reboot
 ### Update distro and APTs
 ### Install Packages
 `Add APT Repository` git-core/ppa
-`Install` neofetch, build-essential, curl, gnome-tweaks, make, git, htop, wget   
+`Install` neofetch, build-essential, curl, gnome-tweaks, make, git, htop, wget, curl
 `Install` Whale Browser (Based on Chromium), VSCode, VMware Player, Spotify    
 `Clean` firefox, thunderbird and unused packages(via apt autoremove), `VMware-Player-16.1.0-17198959.x86_64.bundle`   
   
@@ -28,7 +28,7 @@ neofetch
 
 ## zsh_install.sh
 ![스크린샷, 2021-05-20 02-38-11](https://user-images.githubusercontent.com/42508318/118858803-7fd3bf00-b914-11eb-8471-d3ad4a712f81.png)    
-install zsh and oh-my-zsh(agnoster theme), fonts-powerline   
+install zsh and oh-my-zsh(powerlevel10k), MesloLGS NF
 Include `install` git, wget   
 
 ## gnome_appearance.sh
@@ -41,10 +41,6 @@ Photoshop CC v19 installer for Linux  By  Gictorbit
 https://github.com/Gictorbit/photoshopCClinux
 
 script include install wine, winetrick   
-
-## ~~hoffice_install.sh~~
-~~이거 만들어서 깃허브에 올렸던 놈이 빤쓰런함~~
-
 
 ## ibus_KRKEY_Fix.sh
 Fix 한영(KR/EN) Key function for iBus   
