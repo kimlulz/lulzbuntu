@@ -29,7 +29,7 @@ neofetch
 ## zsh_install.sh
 ![스크린샷, 2021-05-20 02-38-11](https://user-images.githubusercontent.com/42508318/118858803-7fd3bf00-b914-11eb-8471-d3ad4a712f81.png)    
 install zsh and oh-my-zsh(powerlevel10k), MesloLGS NF
-Include `install` git, wget   
+Include `install` git, wget, fast-syntax-highlighting, zsh-autosuggestions
 
 ## gnome_appearance.sh
 Install gnome-tweaks, Dash to dock, whitesur
