@@ -27,7 +27,7 @@ neofetch
 
 
 ## zsh_install.sh
-![스크린샷, 2021-05-20 02-38-11](https://user-images.githubusercontent.com/42508318/118858803-7fd3bf00-b914-11eb-8471-d3ad4a712f81.png)    
+![스크린샷, 2021-07-26 18-09-18](https://user-images.githubusercontent.com/42508318/126964121-601118aa-2ab1-4cee-b71e-255a076b3dbe.png)
 install zsh and oh-my-zsh(powerlevel10k), MesloLGS NF
 Include `install` git, wget, fast-syntax-highlighting, zsh-autosuggestions
 
