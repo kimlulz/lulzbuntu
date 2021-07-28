@@ -17,5 +17,5 @@ git clone https://github.com/zdharma/fast-syntax-highlighting.git \
 sed -i 's/plugins=(git)/plugins=(git fast-syntax-highlighting zsh-autosuggestions)/' ~/.zshrc
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
 echo "Finished"
-echo "Please Change Font Manually --> MesloLGS NF 11"
+echo "Please Change Font Manually --> MesloLGS NF"
 zsh
