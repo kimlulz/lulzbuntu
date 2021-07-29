@@ -21,24 +21,29 @@ echo $USERNAME"|lulzbuntu.sh # [Process 2/6] END of process"
 echo $USERNAME"|lulzbuntu.sh # [Process 3/6] Install Basic Packages"
 sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt update
-sudo apt install -y neofetch build-essential gnome-tweaks make git apt-transport-https htop wget curl
+sudo apt install -y build-essential gnome-tweaks make git apt-transport-https htop wget curl
 echo $USERNAME"|lulzbuntu.sh # [Process 3/6] END of process"
 
 echo $USERNAME"|lulzbuntu.sh # [Process 4/6] Install apps from external method"
-echo "$ Install Whale Browser (NAVER_Chromium)..."
+echo "$ Install neofetch from Github"
+git clone https://github.com/dylanaraps/neofetch
+cd neofetch
+sudo make install
+cd ..
+echo "$ Install Whale Browser(Naver) fro Naver Repo"
 sudo sh -c 'echo "deb [arch=amd64] http://repo.whale.naver.com/stable/deb stable main" >> /etc/apt/sources.list.d/naver-whale.list'
 wget -q -O - http://repo.whale.naver.com/stable/deb/public.gpg | sudo apt-key add -
 sudo apt update
 sudo apt install -y naver-whale-stable
-echo "$ Install VSCode..."
+echo "$ Install VSCode from MS Repo"
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt install -y code 
 echo "$ Install VMWare Player..."
 wget https://download3.vmware.com/software/player/file/VMware-Player-16.1.2-17966106.x86_64.bundle --no-check-certificate
-sudo sh VMware-Player-16.1.2-17966106.x86_64.bundle
-echo "$ Install Spotify..."
+sudo sh VMware-Player-16.1.2-17966106.x86_64.bundle 
+echo "$ Install Spotify from Spotify Repo"
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt update && sudo apt install spotify-client
@@ -49,7 +54,8 @@ echo $USERNAME"|lulzbuntu.sh # [Process 4/6] END of process"
 echo $USERNAME"|lulzbuntu.sh # [Process 5/6] Clean"
 sudo apt purge firefox* thunderbird* -y
 sudo apt autoremove -y
-sudo rm VMware-Player-16.1.2-17966106.x86_64.bundle
+sudo rm VMware-Player-16.1.2-17966106.x86_64.bundle 
+sudo rm -rf neofetch/
 echo $USERNAME"|lulzbuntu.sh # [Process 5/6] END of process"
 
 echo $USERNAME"|lulzbuntu.sh # [Process 6/6] Customize bash shell"
