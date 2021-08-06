@@ -48,6 +48,10 @@ You can see package in /usr/src
 `sudo dpkg -i linux-image-5.13.7_1.0_amd64.deb`
 
 ## Troubleshooting
+### Unable to install kernel-package in Non-LTS Repository
+https://packages.ubuntu.com/focal/kernel-package
+`sudo dpkg -i kernel-package_13.018+nmu2_all.deb`
+
 ### make[1]: *** 'certs/x509_certificate_list ERROR 
 Edit kernel configuration file(.config).    
 Find `CONFIG_SYSTEM_TRUSTED_KEYS="debian/canonical-certs.pem" and
@@ -57,6 +61,8 @@ Change to `CONFIG_SYSTEM_TRUSTED_KEYS=""`
 and type `scripts/config --disable SYSTEM_TRUSTED_KEYS` in terminal(/usr/src/{kernel src folder})
 
 ### BTF: .tmp_vmlinux.btf: pahole (pahole) is not available ERROR
-Just install dwarves package    
+Install dwarves package    
 `sudo apt install dwarves`
+
+
 
