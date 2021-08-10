@@ -10,13 +10,13 @@ or just reboot to recovery mode via grub menu -> select dpkg -> reboot
 
 ## lulzbuntu.sh
 ### Change APT Server
-`sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list`
+`sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list`    
 ### Update distro and APTs
 ### Install Packages
-`Add APT Repository` git-core/ppa
-`Install` neofetch, build-essential, curl, gnome-tweaks, make, git, htop, wget, curl
+`Add APT Repository` git-core/ppa    
+`Install` neofetch, build-essential, curl, gnome-tweaks, make, git, htop, wget, curl    
 `Install` Whale Browser (Based on Chromium), VSCode, VMware Player, Spotify    
-`Clean` firefox, thunderbird and unused packages(via apt autoremove), `VMware-Player-16.1.0-17198959.x86_64.bundle`   
+`Clean` firefox, thunderbird and unused packages(via apt autoremove), `VMware-Player-16.1.0-17198959.x86_64.bundle`    
   
 ### Customize .bashrc
 ```
