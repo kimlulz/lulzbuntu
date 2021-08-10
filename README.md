@@ -16,7 +16,7 @@ or just reboot to recovery mode via grub menu -> select dpkg -> reboot
 `Add APT Repository` git-core/ppa    
 `Install` neofetch, build-essential, curl, gnome-tweaks, make, git, htop, wget, curl    
 `Install` Whale Browser (Based on Chromium), VSCode, VMware Player, Spotify    
-`Clean` firefox, thunderbird and unused packages(via apt autoremove), `VMware-Player-16.1.0-17198959.x86_64.bundle`    
+`Clean` firefox, thunderbird and unused packages(via apt autoremove), `VMware-Player-16.1.0-17198959.x86_64.bundle`     
   
 ### Customize .bashrc
 ```
@@ -28,8 +28,8 @@ neofetch
 
 ## zsh_install.sh
 ![스크린샷, 2021-07-26 18-10-31](https://user-images.githubusercontent.com/42508318/126964282-d8d372ef-757e-4798-9280-767a7c8f0845.png)     
-install zsh and oh-my-zsh(powerlevel10k), MesloLGS NF
-Include `install` git, wget, fast-syntax-highlighting, zsh-autosuggestions
+install zsh and oh-my-zsh(powerlevel10k), MesloLGS NF     
+Include `install` git, wget, fast-syntax-highlighting, zsh-autosuggestions     
 
 ## gnome_appearance.sh
 Install gnome-tweaks, Dash to dock, whitesur
