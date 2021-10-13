@@ -52,7 +52,10 @@ You can see package in /usr/src
 https://packages.ubuntu.com/focal/kernel-package
 `sudo dpkg -i kernel-package_13.018+nmu2_all.deb`
 
-### make[1]: *** 'certs/x509_certificate_list ERROR 
+
+### make[1]: *** 'certs/x509_certificate_list ERROR or 
+### make: *** [debian/ruleset/targets/common.mk:301: debian/stamp/build/kernel]
+
 Edit kernel configuration file(.config).    
 Find `CONFIG_SYSTEM_TRUSTED_KEYS="debian/canonical-certs.pem" and
 
