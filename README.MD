@@ -19,8 +19,8 @@ sudo apt install build-essential libncurses5 libncurses5-dev bin86 kernel-packag
 ##Compile
 ### Download Source from kernel.org
 Refer to kernel.org ...    
-Extract source to /usr/source    
-cd /usr/source/linux-[Version]    
+Extract source to /usr/src
+cd /usr/src/linux-[Version]    
 
 ### Make .config file
 Copy current kernel config.   
