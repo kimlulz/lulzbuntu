@@ -25,7 +25,6 @@ neofetch
 ```
 It can be install lolcat, fortune, cowsay for optional. (Also it will automatically write on .bashrc for these packages..)    
 
-
 ## zsh_install.sh
 ![스크린샷, 2021-07-26 18-10-31](https://user-images.githubusercontent.com/42508318/126964282-d8d372ef-757e-4798-9280-767a7c8f0845.png)     
 install zsh and oh-my-zsh(powerlevel10k), MesloLGS NF     

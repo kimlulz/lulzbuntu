@@ -67,13 +67,13 @@ if [ $aws = "y" ] then
     sudo apt install lolcat fortune
     sudo npm install cowsay
     wget -P ~/ https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/pepe2.ascii 
-    echo "fortune | cowsay -f tux | lolcat 
-    PS1='\[\e[0m\][\[\e[0;1;91m\]\u\[\e[0m\]|\[\e[0;1m\]$?\[\e[0m\]] \[\e[0;1;3;4m\]\w\[\e[0m\] \[\e[0;92m\]\$ \[\e[0m\]'
-    neofetch --ascii ~/pepe2.ascii | lolcat" > ~/.bashrc 
+    echo "PS1='\[\e[0m\][\[\e[0;1;91m\]\u\[\e[0m\]|\[\e[0;1m\]$?\[\e[0m\]] \[\e[0;1;3;4m\]\w\[\e[0m\] \[\e[0;92m\]\$ \[\e[0m\]'
+fortune | cowsay -f tux | lolcat 
+neofetch --ascii ~/pepe2.ascii | lolcat" > ~/.bashrc
 else
     wget -P ~/ https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/pepe2.ascii 
-    echo "PS1='\[\e[0m\][\[\e[0;1;91m\]\u\[\e[0m\]|\[\e[0;1m\]$?\[\e[0m\]] \[\e[0;1;3;4m\]\w\[\e[0m\] \[\e[0;92m\]\$ \[\e[0m\]'
-    neofetch --ascii ~/pepe2.ascii" > ~/.bashrc
+    echo "PS1='\[\e[0m\][\[\e[0;1;91m\]\u\[\e[0m\]|\[\e[0;1m\]$?\[\e[0m\]] \[\e[0;1;3;4m\]\w\[\e[0m\] \[\e[0;92m\]\$ \[\e[0m\]' 
+neofetch --ascii ~/pepe2.ascii" > ~/.bashrc
 fi
 echo ""
 sleep 5
