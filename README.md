@@ -23,7 +23,7 @@ or just reboot to recovery mode via grub menu -> select dpkg -> reboot
 PS1='\[\e[0m\][\[\e[0;1;91m\]\u\[\e[0m\]|\[\e[0;1m\]$?\[\e[0m\]] \[\e[0;1;3;4m\]\w\[\e[0m\] \[\e[0;92m\]\$ \[\e[0m\]'
 neofetch
 ```
-It can be install lolcat, fortune, cowsay for optional    
+It can be install lolcat, fortune, cowsay for optional. (Also it will automatically write on .bashrc for these packages..)    
 
 
 ## zsh_install.sh
