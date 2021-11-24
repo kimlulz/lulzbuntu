@@ -1,13 +1,8 @@
 #!/bin/bash
+bold=$(tput bold)
+normal=$(tput sgr0)
 
-if [ -f /etc/apt/sources.list ]; then
-  sudo apt install -y git wget zsh
-elif [ -f /etc/fedora-release ]; then
-  sudo dnf install -y git wget zsh
-else
-  echo "QUIT"
-  exit
-fi
+sudo apt install -y git wget zsh
 
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 chsh -s /usr/bin/zsh
@@ -25,8 +20,27 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
   ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 sed -i 's/plugins=(git)/plugins=(git fast-syntax-highlighting zsh-autosuggestions)/' ~/.zshrc
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
-wget https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/pepe2.ascii -P ~/
-echo "neofetch --ascii ~/pepe2.ascii" >> ~/.zshrc
+
+echo "${bold}Do u want to install lolcat, fortune, cowsay?? [y, n]${normal}"
+read aws
+if [ $aws = "y" ]; then
+    sudo apt install npm
+    sudo apt install lolcat fortune
+    sudo npm install cowsay
+    wget -P ~/ https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/pepe2.ascii 
+    cat ~/.zshrc > ~/.zshrc.bak
+    echo "PS1='\[\e[0m\][\[\e[0;1;91m\]\u\[\e[0m\]|\[\e[0;1m\]$?\[\e[0m\]] \[\e[0;1;3;4m\]\w\[\e[0m\] \[\e[0;92m\]\$ \[\e[0m\]'
+fortune | cowsay -f tux | lolcat 
+neofetch --ascii ~/pepe2.ascii | lolcat" > ~/.zshrc
+    cat ~/.zshrc.bak >> ~/.zshrc
+else
+    wget -P ~/ https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/pepe2.ascii
+    cat ~/.zshrc > ~/.zshrc.bak
+    echo "PS1='\[\e[0m\][\[\e[0;1;91m\]\u\[\e[0m\]|\[\e[0;1m\]$?\[\e[0m\]] \[\e[0;1;3;4m\]\w\[\e[0m\] \[\e[0;92m\]\$ \[\e[0m\]'
+neofetch --ascii ~/pepe2.ascii" > ~/.zshrc
+    cat ~/.zshrc.bak >> ~/.zshrc
+fi
+
 echo "Finished"
 echo "Please Change Font Manually --> MesloLGS NF"
 zsh
