@@ -62,7 +62,7 @@ echo $USERNAME"|lulzbuntu.sh # [Process 6/6] Customize bash shell"
 echo ""
 echo "${bold}Do u want to install lolcat, fortune, cowsay?? [y, n]${normal}"
 read aws
-if [ $aws = "y" ] then
+if [ $aws = "y" ]; then
     sudo apt install npm
     sudo apt install lolcat fortune
     sudo npm install cowsay
@@ -75,7 +75,10 @@ else
     echo "PS1='\[\e[0m\][\[\e[0;1;91m\]\u\[\e[0m\]|\[\e[0;1m\]$?\[\e[0m\]] \[\e[0;1;3;4m\]\w\[\e[0m\] \[\e[0;92m\]\$ \[\e[0m\]'
 neofetch --ascii ~/pepe2.ascii" > ~/.bashrc
 fi
-echo ""
+
+echo "${bold}****************************************************"
+cat ~/.bashrc
+echo "****************************************************${normal}"
 sleep 5
 
 echo $USERNAME"|lulzbuntu.sh # ${bold}Finished."
