@@ -38,7 +38,7 @@ fi
 echo ""
 ```
 It can be install lolcat, fortune, cowsay for optional. (Also it will automatically write on .bashrc for these packages..)   
-![스크린샷, 2021-11-23 18-52-50](https://user-images.githubusercontent.com/42508318/143003241-ec391d90-4f74-4418-9b10-f184877fb6df.png)     
+![스크린샷, 2021-11-24 17-20-02](https://user-images.githubusercontent.com/42508318/143200855-cc11bfce-49d3-4583-a089-b3e5c62c5e59.png)
 
 ## zsh_install.sh
 ![스크린샷, 2021-07-26 18-10-31](https://user-images.githubusercontent.com/42508318/126964282-d8d372ef-757e-4798-9280-767a7c8f0845.png)     
