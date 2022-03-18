@@ -52,9 +52,7 @@ echo ""
 echo "${bold}Do u want to install lolcat, fortune, cowsay?? [y, n]${normal}"
 read aws
 if [ $aws = "y" ]; then
-    sudo apt install npm
-    sudo apt install lolcat fortune
-    sudo npm install cowsay
+    sudo apt install lolcat fortune cowsay
     wget -P ~/ https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/pepe2.ascii 
     echo "PS1='\[\e[0m\][\[\e[0;1;91m\]\u\[\e[0m\]|\[\e[0;1m\]$?\[\e[0m\]] \[\e[0;1;3;4m\]\w\[\e[0m\] \[\e[0;92m\]\$ \[\e[0m\]'
 fortune | cowsay -f tux | lolcat 
