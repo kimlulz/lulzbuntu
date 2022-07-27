@@ -1,6 +1,5 @@
 # lulzbuntu
 Shell script for configure my ubuntu desktop environment.  
-`LTS 20.04.2`   
 To execute, `sh [script].sh`
 
 In case of error while using script (Ex. `oh no something has gone wrong`),   
