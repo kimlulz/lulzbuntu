@@ -1,37 +1,38 @@
 # lulzbuntu
-Shell script for configure my ubuntu desktop environment.  
-To execute, `sh [script].sh`
-
-In case of error while using script (Ex. `oh no something has gone wrong`),   
-CTRL+ALT+F4 to open tty virtual console -> login -> `sudo dpkg --configure -a` -> `reboot` -> `sudo sh lulzbuntu.sh`   
-or just reboot to recovery mode via grub menu -> select dpkg -> reboot   
-
+Shell script for configure my ubuntu desktop environment.
 
 ## lulzbuntu.sh
 ### Change APT Server
 `sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list`    
 ### Update distro and APTs
 ### Install Packages
-`Add APT Repository` git-core/ppa    
-`Install` neofetch, build-essential, curl, gnome-tweaks, make, git, htop, wget, curl    
-`Install` Whale Browser (Based on Chromium), VSCode, VMware Player, Spotify    
-`Clean` firefox, thunderbird and unused packages(via apt autoremove), `VMware-Player-16.1.0-17198959.x86_64.bundle`     
-  
-### Customize .bashrc
+#### **From Official Repo**
 ```
-PS1='\[\e[0m\][\[\e[0;1;91m\]\u\[\e[0m\]|\[\e[0;1m\]$?\[\e[0m\]] \[\e[0;1;3;4m\]\w\[\e[0m\] \[\e[0;92m\]\$ \[\e[0m\]'
-neofetch
+gnome-tweaks make cmake git(from ppa:git-core) wget curl htop pkg-config
 ```
-It can be install lolcat, fortune, cowsay for optional. (Also it will automatically write on .bashrc for these packages..)    
+#### **From External Repo**
+| Name | Method | From |
+| :- | :- | :- |
+| **Git**  | Package | **PPA** git-core |
+| **Fastfetch**  | Build | [Github](https://github.com/LinusDierheimer/fastfetch) |
+| **Visual Studio Code** | Package | Microsoft Repo |
 
-## zsh_install.sh
-![스크린샷, 2021-07-26 18-10-31](https://user-images.githubusercontent.com/42508318/126964282-d8d372ef-757e-4798-9280-767a7c8f0845.png)     
-install zsh and oh-my-zsh(powerlevel10k), MesloLGS NF     
-Include `install` git, wget, fast-syntax-highlighting, zsh-autosuggestions     
+#### **Optional Install**
 
-## gnome_appearance.sh
-Install gnome-tweaks, Dash to dock, whitesur
-Should install some extentions manually.. (will show urls of extentions)
+**Browser**
+| Name | Method | From |
+| :- | :- | :- |
+| **Google Chrome**  | Package | [Google](https://www.google.com/chrome/) |
+| **Ungoogled-Chrome**  | Build | [Github](https://github.com/ungoogled-software/ungoogled-chromium-debian) |
+| **Naver Whale** | Package | [Naver Repo](https://repo.whale.naver.com/) |
+
+**Shell**
+| Name | Method | Additional |
+| :- | :- | :- |
+| **Zsh**  | Package | omz, zplug, preset |
+| **Fish**  | Package | omf |
+### Clean-up
+Remove temporary files and packages (Include Thunderbird)
 
 ## PsCC-Linux.sh
 Install Photoshop CC for Linux   
@@ -40,6 +41,4 @@ https://github.com/Gictorbit/photoshopCClinux
 
 script include install wine, winetrick   
 
-## ibus_KRKEY_Fix.sh
-Fix 한영(KR/EN) Key function for iBus   
-set default kr106 to kr104
+

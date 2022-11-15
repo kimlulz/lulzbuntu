@@ -1,71 +1,104 @@
 #!/bin/bash
-bold=$(tput bold)
-normal=$(tput sgr0)
-echo "##############################################################################"
-echo "################################ lulzbuntu.sh ################################"
-echo "##############################################################################"
-echo "${bold}S C R I P T   B Y   K I M L U L Z"
-echo "github.com/kimlulz/lulzbuntu${normal}"
+BL=$(tput bold)
+NRM=$(tput sgr0)
 
-echo $USERNAME"|lulzbuntu.sh # [Process 1/6] Change Mirror Server"
-echo "---> mirror.kakao.com"
-sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
+function becho {
+	>&2 echo -n "$BL$1$NRM"
+	echo ""
+}
+mkdir ./tmp 
+
+becho "1. Change Mirror Server"
+    sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 echo ""
 
-echo $USERNAME"|lulzbuntu.sh # [Process 2/6] Upgrade all Packages"
-sudo apt update
-sudo apt upgrade -y
-sudo apt dist-upgrade
+becho "2. Upgrade exist packages"
+    sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade
 echo ""
 
-echo $USERNAME"|lulzbuntu.sh # [Process 3/6] Install Basic Packages"
-sudo add-apt-repository ppa:git-core/ppa -y
-sudo apt update
-sudo apt install -y build-essential gnome-tweaks make git apt-transport-https htop wget curl
+becho "3. Install Packages from repository"
+    sudo apt update
+    sudo apt install -y gnome-tweaks make cmake git wget curl htop pkg-config
 echo ""
 
-echo $USERNAME"|lulzbuntu.sh # [Process 4/6] Install apps from external method"
-echo "$ Install neofetch from Github"
-git clone https://github.com/dylanaraps/neofetch
-cd neofetch
-sudo make install
-cd ..
-echo "$ Install Whale Browser(Naver) fro Naver Repo"
-sudo sh -c 'echo "deb [arch=amd64] http://repo.whale.naver.com/stable/deb stable main" >> /etc/apt/sources.list.d/naver-whale.list'
-wget -q -O - http://repo.whale.naver.com/stable/deb/public.gpg | sudo apt-key add -
-sudo apt update
-sudo apt install -y naver-whale-stable
-echo "$ Install VSCode from MS Repo"
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
-sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
-sudo apt install -y code 
-
-echo $USERNAME"|lulzbuntu.sh # [Process 5/6] Clean"
-sudo apt purge firefox* thunderbird* -y
-sudo apt autoremove -y
-sudo rm -rf neofetch/
+becho "4. Install Packages from external repo"
+    becho "Git from ppa:git-core"
+        sudo add-apt-repository ppa:git-core/ppa -y && sudo apt update && sudo apt install -y git && echo ""
+    
+    becho "Fastfetch.."
+        cd ./tmp
+        git clone https://github.com/LinusDierheimer/fastfetch
+        cd fastfetch && mkdir -p build && cd build
+        cmake .. && cmake --build . --target fastfetch --target flashfetch && cmake --install . --prefix /usr/local
+        cd ../../  && echo ""
+    
+    becho "Visual Studio Code.."
+        wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+        sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+        sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+        sudo apt update && sudo apt install -y code && echo ""
+    
+    becho "Browser.."
+        becho "*************************************************"
+        becho "(1) Google Chrome | Package | from google" 
+        becho "(2) Ungoogled-Chrome | Build | from github"
+        becho "(3) Naver Whale | Package | from naver"
+        becho "(*) Firefox | Default"
+        becho "*************************************************"
+        becho "[1/2/3/[none]] > " ; read BRWS
+        
+        if [ $BRWS = "1" ]; then
+			wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            sudo apt install ./google-chrome-stable_current_amd64.deb && sudo apt purge firefox* -y && echo ""
+        elif [ $BRWS = "2" ]; then
+            sudo apt install -y devscripts equivs
+            git clone https://github.com/ungoogled-software/ungoogled-chromium-debian.git
+            cd ungoogled-chromium-debian && git submodule update --init --recursive && debian/rules setup
+            sudo mk-build-deps -i debian/control && rm ungoogled-chromium-build-deps_* && dpkg-buildpackage -b -uc
+            sudo apt install ./ungoogled-chromium- && sudo apt purge firefox* devscripts equivs -y && cd .. && echo ""
+        elif [ $BRWS = "3" ]; then
+            sudo sh -c 'echo "deb [arch=amd64] http://repo.whale.naver.com/stable/deb stable main" >> /etc/apt/sources.list.d/naver-whale.list'
+            wget -q -O - http://repo.whale.naver.com/stable/deb/public.gpg | sudo apt-key add -
+            sudo apt update && sudo apt install -y naver-whale-stable && sudo apt purge firefox* -y && echo ""
+        else
+            echo "Using Firefox" && echo ""
+        fi
+    
+    becho "Shell.."
+        becho "*************"
+        becho "(1) Zsh"
+        becho "(2) Fish"
+        becho "(*) Bash"
+        becho "*************"
+        becho "[1/2/[none]] > " ; read SHC
+        
+        if [ $SHC = "1" ]; then
+            sudo apt install -y zsh && sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended && chsh -s /usr/bin/zsh
+            mkdir ~/.local/share/fonts
+            wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf -P ~/.local/share/fonts/
+            wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf -P ~/.local/share/fonts/
+            wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf -P ~/.local/share/fonts/
+            wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf -P ~/.local/share/fonts/
+            fc-cache -f -v
+            curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+            wget https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/.zshrc && mv .zshrc ~/.zshrc
+            wget https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/preset -P ~/.fastfetch && wget https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/pepe2.ascii -P ~/.fastfetch
+            echo "fastfetch --load-config .fastfetch/preset -l ~/.fastfetch/pepe2.ascii" >> ~/.bashrc && echo "fastfetch --load-config .fastfetch/preset -l ~/.fastfetch/pepe2.ascii" >> ~/.zshrc && echo ""
+        
+        elif [ $SHC = "2" ]; then
+            sudo apt-add-repository ppa:fish-shell/release-2 && sudo apt update && sudo apt install fish -y && chsh -s /usr/bin/fish
+            curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/tools/install.fish | fish
+            echo "Theme 'agnoster'" >> ~/.config/fish/config.fish && echo "Plugin 'theme'" >> ~/.config/fish/config.fish
+            omf install && omf theme agnoster && echo ""
+        
+        else
+            mkdir -p ~/.fastfetch && wget https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/pepe2.ascii -P ~/.fastfetch
+            echo "PS1='\[\e[0m\][\[\e[0;1;91m\]\u\[\e[0m\]|\[\e[0;1m\]$?\[\e[0m\]] \[\e[0;1;3;4m\]\w\[\e[0m\] \[\e[0;92m\]\$ \[\e[0m\]'" > ~/.bashrc && echo "fastfetch -l ~/.fastfetch/pepe2.ascii" >> ~/.bashrc && echo ""
+        fi
+    
+becho "5. Clean-up"
+    cd ..
+    sudo apt purge thunderbird* -y && sudo apt autoremove -y && rm -rf ./tmp
 echo ""
 
-echo $USERNAME"|lulzbuntu.sh # [Process 6/6] Customize bash shell"
-echo ""
-echo "${bold}Do u want to install lolcat, fortune, cowsay?? [y, n]${normal}"
-read aws
-if [ $aws = "y" ]; then
-    sudo apt install lolcat fortune cowsay
-    wget -P ~/ https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/pepe2.ascii 
-    echo "PS1='\[\e[0m\][\[\e[0;1;91m\]\u\[\e[0m\]|\[\e[0;1m\]$?\[\e[0m\]] \[\e[0;1;3;4m\]\w\[\e[0m\] \[\e[0;92m\]\$ \[\e[0m\]'
-fortune | cowsay -f tux | lolcat 
-neofetch --ascii ~/pepe2.ascii | lolcat" > ~/.bashrc
-else
-    wget -P ~/ https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/pepe2.ascii 
-    echo "PS1='\[\e[0m\][\[\e[0;1;91m\]\u\[\e[0m\]|\[\e[0;1m\]$?\[\e[0m\]] \[\e[0;1;3;4m\]\w\[\e[0m\] \[\e[0;92m\]\$ \[\e[0m\]'
-neofetch --ascii ~/pepe2.ascii" > ~/.bashrc
-fi
-
-echo "${bold}****************************************************"
-cat ~/.bashrc
-echo "****************************************************${normal}"
-sleep 5
-
-echo $USERNAME"|lulzbuntu.sh # ${bold}Finished."
+becho "Finished"
