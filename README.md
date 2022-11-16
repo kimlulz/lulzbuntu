@@ -1,4 +1,7 @@
 # lulzbuntu
+![image](https://user-images.githubusercontent.com/42508318/202068495-f93650aa-4b9a-4adc-b53f-c17ef2f0f4d0.png)
+
+
 Shell script for configure my ubuntu desktop environment.
 
 ## lulzbuntu.sh
@@ -16,6 +19,7 @@ gnome-tweaks make cmake wget curl htop pkg-config
 | **Git**  | Package | **PPA** git-core |
 | **Fastfetch**  | Build | [Github](https://github.com/LinusDierheimer/fastfetch) |
 | **Visual Studio Code** | Package | Microsoft Repo |
+| **Hyper (Terminal)** | Package | [Hyper](https://https://hyper.is) |
 
 #### **Optional Install**
 
