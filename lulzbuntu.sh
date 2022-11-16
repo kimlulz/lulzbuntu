@@ -29,7 +29,7 @@ becho "4. Install Packages from external repo"
         git clone https://github.com/LinusDierheimer/fastfetch
         cd fastfetch && mkdir -p build && cd build
         cmake .. && cmake --build . --target fastfetch --target flashfetch && cmake --install . --prefix /usr/local
-        cd ../../  && echo ""
+        cd ../../  && mkdir -p ~/.fastfetch && echo ""
     
     becho "Visual Studio Code.."
         wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -88,11 +88,12 @@ becho "4. Install Packages from external repo"
             sudo apt-add-repository ppa:fish-shell/release-2 && sudo apt update && sudo apt install fish -y && chsh -s /usr/bin/fish
             curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/tools/install.fish | fish
             echo "Theme 'agnoster'" >> ~/.config/fish/config.fish && echo "Plugin 'theme'" >> ~/.config/fish/config.fish
+            wget https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/preset -P ~/.fastfetch && wget https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/pepe2.ascii -P ~/.fastfetch
             omf install && omf theme agnoster && echo ""
         
         else
-            mkdir -p ~/.fastfetch && wget https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/pepe2.ascii -P ~/.fastfetch
-            echo "PS1='\[\e[0m\][\[\e[0;1;91m\]\u\[\e[0m\]|\[\e[0;1m\]$?\[\e[0m\]] \[\e[0;1;3;4m\]\w\[\e[0m\] \[\e[0;92m\]\$ \[\e[0m\]'" > ~/.bashrc && echo "fastfetch -l ~/.fastfetch/pepe2.ascii" >> ~/.bashrc && echo ""
+            wget https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/preset -P ~/.fastfetch && wget https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/pepe2.ascii -P ~/.fastfetch
+            echo "PS1='\[\e[0m\][\[\e[0;1;91m\]\u\[\e[0m\]|\[\e[0;1m\]$?\[\e[0m\]] \[\e[0;1;3;4m\]\w\[\e[0m\] \[\e[0;92m\]\$ \[\e[0m\]'" > ~/.bashrc && echo "fastfetch --load-config .fastfetch/preset -l ~/.fastfetch/pepe2.ascii" >> ~/.bashrc && echo ""
         fi
     
 becho "5. Clean-up"
