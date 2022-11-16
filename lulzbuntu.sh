@@ -4,6 +4,7 @@ NRM=$(tput sgr0)
 
 function becho {
 	>&2 echo -n "$BL$1$NRM"
+    echo ""
 }
 mkdir ./tmp 
 
