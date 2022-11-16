@@ -38,6 +38,12 @@ becho "4. Install Packages from external repo"
         sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
         sudo apt update && sudo apt install -y code && echo ""
     
+    becho "Hyper Terminal.."
+        wget https://releases.hyper.is/download/deb -O hyper.deb && sudo apt install ./hyper.deb
+        hyper && sleep 3 && killall hyper #generate ~/.hyper.js
+        sed -i "s/fontFamily: '/fontFamily : 'MesloLGS NF, /g" ~/.hyper.js
+        hyper i hyper-one-light
+
     becho "Browser.."
         becho "*************************************************"
         becho "(1) Google Chrome | Package | from google" 
@@ -48,7 +54,7 @@ becho "4. Install Packages from external repo"
         becho "[1/2/3/[none]] > " ; read BRWS
         
         if [ $BRWS = "1" ]; then
-			wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
             sudo apt install ./google-chrome-stable_current_amd64.deb && sudo apt purge firefox* -y && echo ""
         elif [ $BRWS = "2" ]; then
             sudo apt install -y devscripts equivs
