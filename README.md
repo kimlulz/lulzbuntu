@@ -8,7 +8,7 @@ Shell script for configure my ubuntu desktop environment.
 ### Install Packages
 #### **From Official Repo**
 ```
-gnome-tweaks make cmake git(from ppa:git-core) wget curl htop pkg-config
+gnome-tweaks make cmake wget curl htop pkg-config
 ```
 #### **From External Repo**
 | Name | Method | From |
