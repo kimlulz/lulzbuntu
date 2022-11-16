@@ -29,7 +29,7 @@ becho "4. Install Packages from external repo"
         cd ./tmp
         git clone https://github.com/LinusDierheimer/fastfetch
         cd fastfetch && mkdir -p build && cd build
-        cmake .. && cmake --build . --target fastfetch --target flashfetch && cmake --install . --prefix /usr/local
+        cmake .. && cmake --build . --target fastfetch --target flashfetch && sudo cmake --install . --prefix /usr/local
         cd ../../  && mkdir -p ~/.fastfetch && echo ""
     
     becho "Visual Studio Code.."
