@@ -42,7 +42,6 @@ becho "4. Install Packages from external repo"
         wget https://releases.hyper.is/download/deb -O hyper.deb && sudo apt install ./hyper.deb
         hyper && sleep 3 && killall hyper #generate ~/.hyper.js
         sed -i "s/fontFamily: '/fontFamily : 'MesloLGS NF, /g" ~/.hyper.js
-        hyper i hyper-one-light
 
     becho "Browser.."
         becho "*************************************************"
