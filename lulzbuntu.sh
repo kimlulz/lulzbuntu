@@ -42,6 +42,12 @@ becho "4. Install Packages from external repo"
         wget https://releases.hyper.is/download/deb -O hyper.deb && sudo apt install ./hyper.deb
         hyper && sleep 3 && killall hyper #generate ~/.hyper.js
         sed -i "s/fontFamily: '/fontFamily : 'MesloLGS NF, /g" ~/.hyper.js
+        mkdir ~/.local/share/fonts
+        wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf -P ~/.local/share/fonts/
+        wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf -P ~/.local/share/fonts/
+        wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf -P ~/.local/share/fonts/
+        wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf -P ~/.local/share/fonts/
+        fc-cache -f -v
 
     becho "Browser.."
         becho "*************************************************"
@@ -79,12 +85,6 @@ becho "4. Install Packages from external repo"
         
         if [ $SHC = "1" ]; then
             sudo apt install -y zsh && sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended && chsh -s /usr/bin/zsh
-            mkdir ~/.local/share/fonts
-            wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf -P ~/.local/share/fonts/
-            wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf -P ~/.local/share/fonts/
-            wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf -P ~/.local/share/fonts/
-            wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf -P ~/.local/share/fonts/
-            fc-cache -f -v
             curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
             wget https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/.zshrc && mv .zshrc ~/.zshrc
             wget https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/preset -P ~/.fastfetch && wget https://raw.githubusercontent.com/kimlulz/dotfiles/main/zsh/pepe2.ascii -P ~/.fastfetch
