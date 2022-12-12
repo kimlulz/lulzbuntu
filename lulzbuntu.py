@@ -17,7 +17,7 @@ bold = subprocess.check_output(['tput', 'bold'])
 nrm = subprocess.check_output(['tput', 'sgr0'])
 
 def becho(text):
-    print(f"{bold}{text}{nrm}")
+    print(f"\033[1m{text}\033[0m")
 
 becho("Make temporary folder for Cleaning")
 os.mkdir('./tmp')
